@@ -425,6 +425,7 @@ climate::ClimateAction ThermostatClimate::compute_supplemental_action_() {
     case climate::CLIMATE_MODE_OFF:
       target_action = climate::CLIMATE_ACTION_OFF;
       break;
+    case climate::CLIMATE_MODE_AUTO:
     case climate::CLIMATE_MODE_HEAT_COOL:
       if (this->supplemental_cooling_required_() && this->supplemental_heating_required_()) {
         // this is bad and should never happen, so just stop.
